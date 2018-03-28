@@ -28,6 +28,7 @@ def get_record():
 
     soup = BeautifulSoup(response.text, "html.parser")
     soup2 = BeautifulSoup(response2.text, "html.parser")
+    result = {'date': yesterday.strftime(str_format),'update_date':str(datetime.datetime.today()), "source": source, "sourc2": source2}
     result = {'date': yesterday.strftime(str_format), "source": source, "sourc2": source2}
     for table in soup.find_all('div', class_="portlet")[0].find_all('table')[1].find_all('table'):
         table_data = [[cell.text for cell in row("td")]
@@ -93,11 +94,14 @@ def check_record():
         print "数据库中未有当前日期数据！"
         return False
 
-# get_record()
-count = 1
-while True:
-    print "======================================"
-    print "总计第" + str(count) + "次抓取" + " 当前时间： " + str(datetime.datetime.today())
-    get_record()
-    time.sleep(3600)
-    count += 1
+
+#get_record()
+#count = 1
+#while True:
+print "======================================"
+print "当前时间： " + str(datetime.datetime.today())
+#print "总计第" + str(count) + "次抓取" + " 当前时间： " + str(datetime.datetime.today())
+get_record()
+#    time.sleep(10)
+#    count += 1
+
