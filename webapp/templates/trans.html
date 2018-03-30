@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block page_content %}
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<h2>欢迎来到AI House</h2>
+<div id="everyday_trans" style="width:100%; height:600px;"></div>
+<div id="everyday_verify" style="width:100%; height:600px;"></div>
+<div id="everyweek_trans" style="width:100%; height:600px;"></div>
+
+{% autoescape false %}
+<script>
+    $(function () {
+        var myChart = Highcharts.chart('everyday_trans', {
+            chart: {
+                type: 'line'
+            },
+            legend: {
+                layout: 'vertical',
+
+            },
+            title: {
+                text: '每日网签数据'
+            },
+            xAxis: {
+                categories: {{date}}
+            },
+            yAxis: {
+                title: {
+                    text: '网签量'
+                }
+            },
+            plotOptions : {
+                line:{
+                    dataLabels:{
+                        enabled: true,
+                    }
+                }
+            },
+            series: [{
+                name: '住宅签约',
+                data: {{num_trans}}
+            }]
+        });
+    });
+    $(function () {
+        var myChart = Highcharts.chart('everyday_verify', {
+            chart: {
+                type: 'line'
+            },
+            legend: {
+                layout: 'vertical',
+
+            },
+            title: {
+                text: '每日核验数据'
+            },
+            xAxis: {
+                categories: {{date}}
+            },
+            yAxis: {
+                title: {
+                    text: '核验量'
+                }
+            },
+            plotOptions : {
+                line:{
+                    dataLabels:{
+                        enabled: true,
+                    }
+                }
+            },
+            series: [{
+                name: '住宅核验',
+                data: {{num_verify}}
+            }]
+        });
+    });
+    $(function () {
+        var myChart = Highcharts.chart('everyweek_trans', {
+            chart: {
+                type: 'line'
+            },
+            legend: {
+                layout: 'vertical',
+
+            },
+            title: {
+                text: '每周网签数据'
+            },
+            xAxis: {
+                categories: {{weeks}}
+            },
+            yAxis: {
+                title: {
+                    text: '网签量'
+                }
+            },
+            plotOptions : {
+                line:{
+                    dataLabels:{
+                        enabled: true,
+                    }
+                }
+            },
+            series: [{
+                name: '住宅签约',
+                data: {{num_week}}
+            }]
+        });
+    });
+</script>
+{% endautoescape %}
+
+{% endblock %}
+{% block script %}
+
+
+{% endblock %}

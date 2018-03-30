@@ -11,6 +11,7 @@ yesterday = today - datetime.timedelta(days=1)
 request_url = 'http://www.bjjs.gov.cn/bjjs/fwgl/fdcjy/fwjy/index.shtml'
 request_url2 = 'http://210.75.213.188/shh/portal/bjjs/index.aspx'
 
+
 def get_record():
     print "当前需要抓取日期为：" + str(yesterday)
     response = requests.get(request_url)
@@ -28,8 +29,8 @@ def get_record():
 
     soup = BeautifulSoup(response.text, "html.parser")
     soup2 = BeautifulSoup(response2.text, "html.parser")
-    result = {'date': yesterday.strftime(str_format),'update_date':str(datetime.datetime.today()), "source": source, "sourc2": source2}
-    result = {'date': yesterday.strftime(str_format), "source": source, "sourc2": source2}
+    result = {'date': yesterday.strftime(str_format), 'update_date': str(datetime.datetime.today()), "source": source,
+              "sourc2": source2}
     for table in soup.find_all('div', class_="portlet")[0].find_all('table')[1].find_all('table'):
         table_data = [[cell.text for cell in row("td")]
                       for row in table("tr")]
@@ -95,13 +96,12 @@ def check_record():
         return False
 
 
-#get_record()
-#count = 1
-#while True:
+# get_record()
+# count = 1
+# while True:
 print "======================================"
 print "当前时间： " + str(datetime.datetime.today())
-#print "总计第" + str(count) + "次抓取" + " 当前时间： " + str(datetime.datetime.today())
+# print "总计第" + str(count) + "次抓取" + " 当前时间： " + str(datetime.datetime.today())
 get_record()
 #    time.sleep(10)
 #    count += 1
-
