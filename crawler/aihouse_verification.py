@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
 str_format = '%Y/%m/%d'
-uri = 'mongodb://mzniu:Nmz53187223@www.mzniu.com:27017'
+uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
 request_url = 'http://210.75.213.188/shh/portal/bjjs2016/list.aspx?pagenumber=1'
