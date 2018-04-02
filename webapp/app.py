@@ -10,7 +10,7 @@ import datetime
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)  # Flask扩展一般都在创建实例时初始化，这行代码是Flask-Bootstrap的初始化方法
-uri = 'mongodb://mzniu:Nmz53187223@www.mzniu.com:27017'
+uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 
 
 @app.route('/')
