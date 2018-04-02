@@ -1,4 +1,5 @@
 # coding:utf-8
+###TEMPLATE-UPDATED:2018-04-02 15:51:05.930000
 from flask import Flask, render_template
 # from flask.ext.bootstrap import Bootstrap #专为Flask开发发拓展都暴露在flask.ext命名空间下，Flask-Bootstrap输出一个Bootstrap类
 from flask_bootstrap import Bootstrap

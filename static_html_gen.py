@@ -6,6 +6,7 @@ from pymongo import MongoClient
 uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
+app_path = "webapp/app.py"
 
 
 def gen_index_static_html(date, num_trans, num_verify, weeks, num_week):
@@ -25,6 +26,18 @@ def gen_index_static_html(date, num_trans, num_verify, weeks, num_week):
         static_file.write(line)
     template_file.close()
     static_file.close()
+
+
+def update_app():
+    file_data = ""
+    with open(app_path, "r") as f:
+        for line in f:
+            if "###TEMPLATE-UPDATED:" in line:
+                line = "###TEMPLATE-UPDATED:" + str(datetime.datetime.now())+"\n"
+            file_data += line
+    with open(app_path, "w") as f:
+        f.write(file_data)
+
 
 def gen_index():
     str_format = '%Y/%m/%d'
@@ -59,7 +72,8 @@ def gen_index():
         num_trans.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
     return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
-                           weeks=weeks[::-1], num_week=num_week[::-1])
+                                 weeks=weeks[::-1], num_week=num_week[::-1])
 
 
 gen_index()
+update_app()
