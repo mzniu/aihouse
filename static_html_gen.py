@@ -3,7 +3,7 @@ import datetime
 import pymongo
 from pymongo import MongoClient
 
-uri = 'mongodb://mzniu:Nmz53187223@www.mzniu.com:27017'
+uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
 
