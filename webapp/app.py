@@ -14,6 +14,11 @@ uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 
 
 @app.route('/')
+def index():
+    return render_template('index_static.html')
+
+
+@app.route('/trans')
 def trans():
     str_format = '%Y/%m/%d'
     today = datetime.date.today()
