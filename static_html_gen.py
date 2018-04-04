@@ -9,7 +9,7 @@ static_html_path = "webapp/templates/index_static.html"
 app_path = "webapp/app.py"
 
 
-def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans, num_week_verify):
+def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans, num_week_verify, day30_num_trans):
     template_file = open(template_html_path, "r")
     static_file = open(static_html_path, "w")
     for line in template_file:
@@ -26,7 +26,7 @@ def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans, nu
         elif "{{num_week_verify}}" in line:
             line = line.replace("{{num_week_verify}}", str(num_week_verify))
         elif "{{day30_num_trans}}" in line:
-            line = line.replace("{{day30_num_trans}}", str(num_week_verify))
+            line = line.replace("{{day30_num_trans}}", str(day30_num_trans))
         static_file.write(line)
     template_file.close()
     static_file.close()
@@ -88,7 +88,7 @@ def gen_index():
         day30_num_trans.append(sum(temp_day30_num) / len(temp_day30_num))
     return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
                                  weeks=weeks[::-1], num_week_trans=num_week_trans[::-1],
-                                 num_week_verify=num_week_verify[::-1],day30_num_trans=day30_num_trans[::-1])
+                                 num_week_verify=num_week_verify[::-1], day30_num_trans=day30_num_trans[::-1])
 
 
 gen_index()
