@@ -9,7 +9,7 @@ static_html_path = "webapp/templates/index_static.html"
 app_path = "webapp/app.py"
 
 
-def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans,num_week_verify):
+def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans, num_week_verify):
     template_file = open(template_html_path, "r")
     static_file = open(static_html_path, "w")
     for line in template_file:
@@ -25,6 +25,8 @@ def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans,num
             line = line.replace("{{num_week_trans}}", str(num_week_trans))
         elif "{{num_week_verify}}" in line:
             line = line.replace("{{num_week_verify}}", str(num_week_verify))
+        elif "{{day30_num_trans}}" in line:
+            line = line.replace("{{day30_num_trans}}", str(num_week_verify))
         static_file.write(line)
     template_file.close()
     static_file.close()
@@ -35,7 +37,7 @@ def update_app():
     with open(app_path, "r") as f:
         for line in f:
             if "###TEMPLATE-UPDATED:" in line:
-                line = "###TEMPLATE-UPDATED:" + str(datetime.datetime.now())+"\n"
+                line = "###TEMPLATE-UPDATED:" + str(datetime.datetime.now()) + "\n"
             file_data += line
     with open(app_path, "w") as f:
         f.write(file_data)
@@ -50,7 +52,7 @@ def gen_index():
     trans = house.transaction
     date = []
     num_trans = []
-    num_all = []
+    day30_num_trans = []
     num_verify = []
     weeks = []
     num_week_trans = []
@@ -59,6 +61,7 @@ def gen_index():
     week_ends = yesterday.strftime(str_format)
     count_week_trans = 0
     count_week_verify = 0
+    temp_day30_num = []
     for item in trans.find().sort("date", pymongo.DESCENDING):
         prefix_date = item['date'].replace("/0", "/").encode("utf-8")
         prefix_date_v = item['date'].replace("/", "-").encode("utf-8")
@@ -76,12 +79,16 @@ def gen_index():
         else:
             count_week_trans += int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8"))
             count_week_verify += int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8"))
-
+        temp_day30_num.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
+        if len(temp_day30_num) > 30:
+            temp_day30_num = temp_day30_num[1:]
         date.append(prefix_date)
         num_trans.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
+        day30_num_trans.append(sum(temp_day30_num) / len(temp_day30_num))
     return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
-                                 weeks=weeks[::-1], num_week_trans=num_week_trans[::-1], num_week_verify=num_week_verify[::-1])
+                                 weeks=weeks[::-1], num_week_trans=num_week_trans[::-1],
+                                 num_week_verify=num_week_verify[::-1],day30_num_trans=day30_num_trans[::-1])
 
 
 gen_index()
