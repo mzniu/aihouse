@@ -22,9 +22,9 @@ def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans,num
         elif "{{weeks}}" in line:
             line = line.replace("{{weeks}}", str(weeks))
         elif "{{num_week_trans}}" in line:
-            line = line.replace("{{num_week}}", str(num_week_trans))
+            line = line.replace("{{num_week_trans}}", str(num_week_trans))
         elif "{{num_week_verify}}" in line:
-            line = line.replace("{{num_week}}", str(num_week_verify))
+            line = line.replace("{{num_week_verify}}", str(num_week_verify))
         static_file.write(line)
     template_file.close()
     static_file.close()
