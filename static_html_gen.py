@@ -43,7 +43,12 @@ def update_app():
         f.write(file_data)
 
 
-def gen_index():
+def gen_index(days=0):
+    reverse = -1
+    if days == 0:
+        reverse =-1
+    else:
+        reverse =1
     str_format = '%Y/%m/%d'
     today = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
@@ -62,7 +67,7 @@ def gen_index():
     count_week_trans = 0
     count_week_verify = 0
     temp_day30_num = []
-    for item in trans.find().sort("date", pymongo.DESCENDING):
+    for item in trans.find().limit(days).sort("date", pymongo.DESCENDING):
         prefix_date = item['date'].replace("/0", "/").encode("utf-8")
         prefix_date_v = item['date'].replace("/", "-").encode("utf-8")
         dayOfWeek = datetime.datetime.strptime(item['date'], str_format).weekday()
@@ -80,12 +85,12 @@ def gen_index():
             count_week_trans += int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8"))
             count_week_verify += int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8"))
         temp_day30_num.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
-        if len(temp_day30_num) > 30:
+        if len(temp_day30_num) == 30:
+            day30_num_trans.append(sum(temp_day30_num) / len(temp_day30_num))
             temp_day30_num = temp_day30_num[1:]
         date.append(prefix_date)
         num_trans.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
-        day30_num_trans.append(sum(temp_day30_num) / len(temp_day30_num))
     return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
                                  weeks=weeks[::-1], num_week_trans=num_week_trans[::-1],
                                  num_week_verify=num_week_verify[::-1], day30_num_trans=day30_num_trans[::-1])
