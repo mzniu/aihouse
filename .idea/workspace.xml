@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static_html_gen.py" afterPath="$PROJECT_DIR$/static_html_gen.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/app.py" afterPath="$PROJECT_DIR$/webapp/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/templates/recent30_static.html" afterPath="$PROJECT_DIR$/webapp/templates/recent30_static.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/aihouse$static_html_gen.coverage" NAME="static_html_gen Coverage Results" MODIFIED="1523112772426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aihouse$static_html_gen.coverage" NAME="static_html_gen Coverage Results" MODIFIED="1523114683024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/aihouse$app__1_.coverage" NAME="app  Coverage Results" MODIFIED="1522661129058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp" />
     <SUITE FILE_PATH="coverage/aihouse$app.coverage" NAME="app Coverage Results" MODIFIED="1522224684587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler/webapp" />
     <SUITE FILE_PATH="coverage/aihouse$analyzeJsonData.coverage" NAME="analyzeJsonData Coverage Results" MODIFIED="1522651963261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -34,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+            <state relative-caret-position="619">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
               <folding>
                 <element signature="e#62#102#0" expanded="true" />
               </folding>
@@ -77,9 +76,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="222">
               <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-              <folding>
-                <marker date="1523093608690" expanded="true" signature="54256:54265" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="static_html_gen.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="static_html_gen.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static_html_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="386">
               <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
@@ -119,67 +116,19 @@
       <file leaf-file-name="recent30_static.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/templates/recent30_static.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="143" column="26" lean-forward="false" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="26" />
-              <folding>
-                <marker date="1523112788685" expanded="true" signature="30284:45322" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="30340:45314" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="30569:40268" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40289:40383" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40314:40369" ph="{&quot;text&quot;: '30日均网签量'...}" />
-                <marker date="1523112788685" expanded="true" signature="40410:41463" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40434:40594" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40468:40529" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40618:41449" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40651:41120" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40693:40859" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="40892:41098" ph="[...]" />
-                <marker date="1523112788685" expanded="true" signature="41150:41207" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="41271:41394" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="41304:41372" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="41485:45304" ph="[...]" />
-                <marker date="1523112788685" expanded="true" signature="41486:45303" ph="{&quot;name&quot;: '住宅网签'...}" />
-                <marker date="1523112788685" expanded="true" signature="45343:49281" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="45403:49273" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="45424:45470" ph="{&quot;type&quot;: 'column'...}" />
-                <marker date="1523112788685" expanded="true" signature="45492:45544" ph="{&quot;layout&quot;: 'vertical'...}" />
-                <marker date="1523112788685" expanded="true" signature="45565:45611" ph="{&quot;text&quot;: '每周网签数据'...}" />
-                <marker date="1523112788685" expanded="true" signature="45632:48218" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="48239:48329" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="48264:48315" ph="{&quot;text&quot;: '网签量'...}" />
-                <marker date="1523112788685" expanded="true" signature="48357:48509" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="48382:48495" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="48415:48477" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="48531:49263" ph="[...]" />
-                <marker date="1523112788685" expanded="true" signature="48532:49262" ph="{&quot;name&quot;: '住宅签约'...}" />
-                <marker date="1523112788685" expanded="true" signature="49302:53242" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="49363:53234" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="49384:49430" ph="{&quot;type&quot;: 'column'...}" />
-                <marker date="1523112788685" expanded="true" signature="49452:49504" ph="{&quot;layout&quot;: 'vertical'...}" />
-                <marker date="1523112788685" expanded="true" signature="49525:49571" ph="{&quot;text&quot;: '每周核验数据'...}" />
-                <marker date="1523112788685" expanded="true" signature="49592:52178" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="52199:52289" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="52224:52275" ph="{&quot;text&quot;: '核验量'...}" />
-                <marker date="1523112788685" expanded="true" signature="52317:52469" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="52342:52455" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="52375:52437" ph="{...}" />
-                <marker date="1523112788685" expanded="true" signature="52491:53224" ph="[...]" />
-                <marker date="1523112788685" expanded="true" signature="52492:53223" ph="{&quot;name&quot;: '住宅签约'...}" />
-              </folding>
+            <state relative-caret-position="335">
+              <caret line="129" column="7" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trans.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/templates/trans.html">
+      <file leaf-file-name="recent60_static.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/templates/recent60_static.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="99" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,9 +148,11 @@
       <find>'</find>
       <find>today</find>
       <find>with</find>
+      <find>[count-days::-1]</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
+      <replace>[days::-1]</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\aihouse</dir>
@@ -228,9 +179,9 @@
         <option value="$PROJECT_DIR$/analyzeJsonData.py" />
         <option value="$PROJECT_DIR$/webapp/templates/index_static.html" />
         <option value="$PROJECT_DIR$/webapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/webapp/app.py" />
         <option value="$PROJECT_DIR$/webapp/templates/recent30_static.html" />
         <option value="$PROJECT_DIR$/static_html_gen.py" />
-        <option value="$PROJECT_DIR$/webapp/app.py" />
       </list>
     </option>
   </component>
@@ -528,9 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
           <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding>
-            <marker date="1523093608690" expanded="true" signature="54256:54265" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -675,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/index_static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <marker date="1523093608690" expanded="true" signature="54256:54265" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2640">
@@ -699,6 +638,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <element signature="e#62#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/templates/30day.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -707,74 +656,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/templates/recent60_static.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="76" column="14" lean-forward="true" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/templates/index_static.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/templates/recent30_static.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="143" column="26" lean-forward="false" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="26" />
-          <folding>
-            <marker date="1523112788685" expanded="true" signature="30284:45322" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="30340:45314" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="30569:40268" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40289:40383" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40314:40369" ph="{&quot;text&quot;: '30日均网签量'...}" />
-            <marker date="1523112788685" expanded="true" signature="40410:41463" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40434:40594" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40468:40529" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40618:41449" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40651:41120" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40693:40859" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="40892:41098" ph="[...]" />
-            <marker date="1523112788685" expanded="true" signature="41150:41207" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="41271:41394" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="41304:41372" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="41485:45304" ph="[...]" />
-            <marker date="1523112788685" expanded="true" signature="41486:45303" ph="{&quot;name&quot;: '住宅网签'...}" />
-            <marker date="1523112788685" expanded="true" signature="45343:49281" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="45403:49273" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="45424:45470" ph="{&quot;type&quot;: 'column'...}" />
-            <marker date="1523112788685" expanded="true" signature="45492:45544" ph="{&quot;layout&quot;: 'vertical'...}" />
-            <marker date="1523112788685" expanded="true" signature="45565:45611" ph="{&quot;text&quot;: '每周网签数据'...}" />
-            <marker date="1523112788685" expanded="true" signature="45632:48218" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="48239:48329" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="48264:48315" ph="{&quot;text&quot;: '网签量'...}" />
-            <marker date="1523112788685" expanded="true" signature="48357:48509" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="48382:48495" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="48415:48477" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="48531:49263" ph="[...]" />
-            <marker date="1523112788685" expanded="true" signature="48532:49262" ph="{&quot;name&quot;: '住宅签约'...}" />
-            <marker date="1523112788685" expanded="true" signature="49302:53242" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="49363:53234" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="49384:49430" ph="{&quot;type&quot;: 'column'...}" />
-            <marker date="1523112788685" expanded="true" signature="49452:49504" ph="{&quot;layout&quot;: 'vertical'...}" />
-            <marker date="1523112788685" expanded="true" signature="49525:49571" ph="{&quot;text&quot;: '每周核验数据'...}" />
-            <marker date="1523112788685" expanded="true" signature="49592:52178" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="52199:52289" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="52224:52275" ph="{&quot;text&quot;: '核验量'...}" />
-            <marker date="1523112788685" expanded="true" signature="52317:52469" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="52342:52455" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="52375:52437" ph="{...}" />
-            <marker date="1523112788685" expanded="true" signature="52491:53224" ph="[...]" />
-            <marker date="1523112788685" expanded="true" signature="52492:53223" ph="{&quot;name&quot;: '住宅签约'...}" />
-          </folding>
+        <state relative-caret-position="335">
+          <caret line="129" column="7" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_html_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="386">
           <caret line="113" column="12" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="e#62#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
