@@ -97,9 +97,9 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
     if days == 0:
         reverse = -1
-        count_week = 0
         date_day30 = date[:-30]
         days = count
+        count_week = int((days+6)/7)
     else:
         reverse = 1
         count_week = int((days+6)/7)
