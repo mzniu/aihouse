@@ -97,14 +97,16 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
     if days == 0:
         reverse = -1
+        count_week = 0
         date_day30 = date[:-30]
     else:
         reverse = 1
+        count_week = int((days+6)/7)
         date_day30 = date[:]
     #print date_day30[days::-1]
     gen_index_static_html(template_html,static_html,date=date[days::-1], num_trans=num_trans[days::-1], num_verify=num_verify[days::-1],
-                                 weeks=weeks[int((days+6)/7)::-1], num_week_trans=num_week_trans[days::-1],
-                                 num_week_verify=num_week_verify[days::-1],date_day30=date_day30[days::-1], day30_num_trans=day30_num_trans[days::-1])
+                                 weeks=weeks[count_week::-1], num_week_trans=num_week_trans[count_week::-1],
+                                 num_week_verify=num_week_verify[count_week::-1],date_day30=date_day30[days::-1], day30_num_trans=day30_num_trans[days::-1])
 
 
 gen_index()
