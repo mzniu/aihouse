@@ -99,6 +99,7 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
         reverse = -1
         count_week = 0
         date_day30 = date[:-30]
+        days = count
     else:
         reverse = 1
         count_week = int((days+6)/7)
