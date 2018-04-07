@@ -3,10 +3,12 @@ import datetime
 import pymongo
 from pymongo import MongoClient
 
-uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
+uri = 'mongodb://aihouse:passw0rd@www.mzniu.com:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
 recent30_static_html_path = "webapp/templates/recent30_static.html"
+recent60_static_html_path = "webapp/templates/recent60_static.html"
+recent90_static_html_path = "webapp/templates/recent90_static.html"
 
 app_path = "webapp/app.py"
 
@@ -69,7 +71,7 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
     count_week_verify = 0
     temp_day30_num = []
     print count
-    for item in trans.find().limit(days).sort("date", pymongo.DESCENDING):
+    for item in trans.find().sort("date", pymongo.DESCENDING):
         prefix_date = item['date'].replace("/0", "/").encode("utf-8")
         prefix_date_v = item['date'].replace("/", "-").encode("utf-8")
         dayOfWeek = datetime.datetime.strptime(item['date'], str_format).weekday()
@@ -98,6 +100,7 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
         date_day30 = date[:-30]
     else:
         reverse = 1
+        date_day30 = date[:]
     print date_day30
     gen_index_static_html(template_html,static_html,date=date[count-days::-1], num_trans=num_trans[count-days::-1], num_verify=num_verify[count-days::-1],
                                  weeks=weeks[count-days::-1], num_week_trans=num_week_trans[count-days::-1],
@@ -106,4 +109,6 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
 
 gen_index()
 gen_index(days=30,template_html=template_html_path,static_html=recent30_static_html_path)
+gen_index(days=60,template_html=template_html_path,static_html=recent60_static_html_path)
+gen_index(days=90,template_html=template_html_path,static_html=recent90_static_html_path)
 update_app()
