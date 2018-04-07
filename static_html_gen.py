@@ -7,8 +7,8 @@ uri = 'mongodb://aihouse:passw0rd@www.mzniu.com:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
 recent30_static_html_path = "webapp/templates/recent30_static.html"
-recent60_static_html_path = "webapp/templates/recent60_static.html"
-recent90_static_html_path = "webapp/templates/recent90_static.html"
+recent120_static_html_path = "webapp/templates/recent120_static.html"
+recent360_static_html_path = "webapp/templates/recent360_static.html"
 
 app_path = "webapp/app.py"
 
@@ -112,6 +112,6 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
 
 gen_index()
 gen_index(days=30,template_html=template_html_path,static_html=recent30_static_html_path)
-gen_index(days=60,template_html=template_html_path,static_html=recent60_static_html_path)
-gen_index(days=90,template_html=template_html_path,static_html=recent90_static_html_path)
+gen_index(days=120,template_html=template_html_path,static_html=recent120_static_html_path)
+gen_index(days=360,template_html=template_html_path,static_html=recent360_static_html_path)
 update_app()
