@@ -3,7 +3,7 @@ import datetime
 import pymongo
 from pymongo import MongoClient
 
-uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
+uri = 'mongodb://aihouse:passw0rd@www.mzniu.com:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
 app_path = "webapp/app.py"
@@ -92,7 +92,7 @@ def gen_index(days=0):
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
         if days == 0:
             reverse = -1
-            date_day30 = date[29:]
+            date_day30 = date[:-30]
         else:
             reverse = 1
     return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
