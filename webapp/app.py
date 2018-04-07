@@ -23,13 +23,13 @@ def recent30():
     return render_template('recent30_static.html')
 
 
-@app.route('/recent60')
-def recent60():
-    return render_template('recent60_static.html')\
+@app.route('/recent120')
+def recent120():
+    return render_template('recent120_static.html')\
 
-@app.route('/recent90')
-def recent90():
-    return render_template('recent90_static.html')
+@app.route('/recent360')
+def recent360():
+    return render_template('recent360_static.html')
 
 
 @app.route('/trans')
