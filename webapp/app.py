@@ -18,6 +18,9 @@ uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 def index():
     return render_template('index_static.html')
 
+@app.route('/recent30')
+def recent30():
+    return render_template('recent30_static.html')
 
 @app.route('/trans')
 def trans():

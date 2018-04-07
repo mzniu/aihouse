@@ -3,13 +3,15 @@ import datetime
 import pymongo
 from pymongo import MongoClient
 
-uri = 'mongodb://aihouse:passw0rd@www.mzniu.com:27017'
+uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 template_html_path = "webapp/templates/index.html"
 static_html_path = "webapp/templates/index_static.html"
+recent30_static_html_path = "webapp/templates/recent30_static.html"
+
 app_path = "webapp/app.py"
 
 
-def gen_index_static_html(date, num_trans, num_verify, weeks, num_week_trans, num_week_verify,date_day30, day30_num_trans):
+def gen_index_static_html(template_html_path,static_html_path,date, num_trans, num_verify, weeks, num_week_trans, num_week_verify,date_day30, day30_num_trans):
     template_file = open(template_html_path, "r")
     static_file = open(static_html_path, "w")
     for line in template_file:
@@ -45,7 +47,7 @@ def update_app():
         f.write(file_data)
 
 
-def gen_index(days=0):
+def gen_index(days=0,template_html=template_html_path,static_html=static_html_path):
     reverse = -1
     str_format = '%Y/%m/%d'
     today = datetime.date.today()
@@ -61,11 +63,12 @@ def gen_index(days=0):
     weeks = []
     num_week_trans = []
     num_week_verify = []
-    print trans.find().count()
+    count = trans.find().count()
     week_ends = yesterday.strftime(str_format)
     count_week_trans = 0
     count_week_verify = 0
     temp_day30_num = []
+    print count
     for item in trans.find().limit(days).sort("date", pymongo.DESCENDING):
         prefix_date = item['date'].replace("/0", "/").encode("utf-8")
         prefix_date_v = item['date'].replace("/", "-").encode("utf-8")
@@ -90,15 +93,17 @@ def gen_index(days=0):
         date.append(prefix_date)
         num_trans.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
-        if days == 0:
-            reverse = -1
-            date_day30 = date[:-30]
-        else:
-            reverse = 1
-    return gen_index_static_html(date=date[::-1], num_trans=num_trans[::-1], num_verify=num_verify[::-1],
-                                 weeks=weeks[::-1], num_week_trans=num_week_trans[::-1],
-                                 num_week_verify=num_week_verify[::-1],date_day30=date_day30[::-1], day30_num_trans=day30_num_trans[::-1])
+    if days == 0:
+        reverse = -1
+        date_day30 = date[:-30]
+    else:
+        reverse = 1
+    print date_day30
+    gen_index_static_html(template_html,static_html,date=date[count-days::-1], num_trans=num_trans[count-days::-1], num_verify=num_verify[count-days::-1],
+                                 weeks=weeks[count-days::-1], num_week_trans=num_week_trans[count-days::-1],
+                                 num_week_verify=num_week_verify[count-days::-1],date_day30=date_day30[count-days::-1], day30_num_trans=day30_num_trans[count-days::-1])
 
 
 gen_index()
+gen_index(days=30,template_html=template_html_path,static_html=recent30_static_html_path)
 update_app()
