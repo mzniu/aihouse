@@ -103,7 +103,7 @@ def gen_index(days=0,template_html=template_html_path,static_html=static_html_pa
         date_day30 = date[:]
     #print date_day30[days::-1]
     gen_index_static_html(template_html,static_html,date=date[days::-1], num_trans=num_trans[days::-1], num_verify=num_verify[days::-1],
-                                 weeks=weeks[int((days+6)/7)::-1], num_week_trans=num_week_trans[int((days+6)/7)::-1],
+                                 weeks=weeks[int((days+6)/7)::-1], num_week_trans=num_week_trans[days::-1],
                                  num_week_verify=num_week_verify[days::-1],date_day30=date_day30[days::-1], day30_num_trans=day30_num_trans[days::-1])
 
 
