@@ -1,5 +1,5 @@
 # coding:utf-8
-###TEMPLATE-UPDATED:2018-04-02 15:51:05.930000
+###TEMPLATE-UPDATED:2018-04-07 23:30:57.183000
 from flask import Flask, render_template
 # from flask.ext.bootstrap import Bootstrap #专为Flask开发发拓展都暴露在flask.ext命名空间下，Flask-Bootstrap输出一个Bootstrap类
 from flask_bootstrap import Bootstrap
@@ -17,6 +17,19 @@ uri = 'mongodb://aihouse:passw0rd@127.0.0.1:27017'
 @app.route('/')
 def index():
     return render_template('index_static.html')
+
+@app.route('/recent30')
+def recent30():
+    return render_template('recent30_static.html')
+
+
+@app.route('/recent120')
+def recent120():
+    return render_template('recent120_static.html')\
+
+@app.route('/recent360')
+def recent360():
+    return render_template('recent360_static.html')
 
 
 @app.route('/trans')
