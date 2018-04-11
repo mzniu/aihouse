@@ -31,6 +31,9 @@ def recent120():
 def recent360():
     return render_template('recent360_static.html')
 
+@app.route('/lianjia')
+def lianjia():
+    return render_template('lianjia_static.html')
 
 @app.route('/trans')
 def trans():
