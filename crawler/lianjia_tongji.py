@@ -5,7 +5,10 @@ import datetime
 import time
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
+import sys
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 str_format = '%Y/%m/%d'
 uri = 'mongodb://mzniu:Nmz53187223@www.mzniu.com:27017'
 today = datetime.date.today()
@@ -98,7 +101,7 @@ def get_area_record(area):
                 0]
         result = {lianjia_average_title: lianjia_average_num, "new_trans": new_trans,
                   "new_takelook": new_takelook, "on_sale": on_sale, "recent90_trans": recent90_trans}
-        print lianjia_average_num, new_trans, new_takelook, on_sale, recent90_trans
+        print str(lianjia_average_num), str(new_trans), str(new_takelook), str(on_sale), str(recent90_trans)
         return result
 
 
