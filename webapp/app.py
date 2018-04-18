@@ -1,5 +1,5 @@
 # coding:utf-8
-###TEMPLATE-UPDATED:2018-04-07 23:30:57.183000
+###TEMPLATE-UPDATED:2018-04-18 12:33:20.292000
 from flask import Flask, render_template
 # from flask.ext.bootstrap import Bootstrap #专为Flask开发发拓展都暴露在flask.ext命名空间下，Flask-Bootstrap输出一个Bootstrap类
 from flask_bootstrap import Bootstrap
@@ -34,6 +34,10 @@ def recent360():
 @app.route('/lianjia')
 def lianjia():
     return render_template('lianjia_static.html')
+
+@app.route('/lianjia_area')
+def lianjia_area():
+    return render_template('lianjia_area_static.html')
 
 @app.route('/trans')
 def trans():
