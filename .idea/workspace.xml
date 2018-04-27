@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c2284ba-ae67-458c-8b3c-658ae0cc3222" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/webapp/templates/lianjia_area_static.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webapp/templates/lianjia_area_template.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/aihouse.iml" afterPath="$PROJECT_DIR$/.idea/aihouse.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/static_html_gen.py" afterPath="$PROJECT_DIR$/static_html_gen.py" />
       <change beforePath="$PROJECT_DIR$/webapp/app.py" afterPath="$PROJECT_DIR$/webapp/app.py" />
-      <change beforePath="$PROJECT_DIR$/webapp/templates/base.html" afterPath="$PROJECT_DIR$/webapp/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/index.html" afterPath="$PROJECT_DIR$/webapp/templates/index.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/index_static.html" afterPath="$PROJECT_DIR$/webapp/templates/index_static.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/lianjia_area_static.html" afterPath="$PROJECT_DIR$/webapp/templates/lianjia_area_static.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/lianjia_area_template.html" afterPath="$PROJECT_DIR$/webapp/templates/lianjia_area_template.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/lianjia_static.html" afterPath="$PROJECT_DIR$/webapp/templates/lianjia_static.html" />
+      <change beforePath="$PROJECT_DIR$/webapp/templates/recent30_static.html" afterPath="$PROJECT_DIR$/webapp/templates/recent30_static.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,9 +22,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/aihouse$app__1_.coverage" NAME="app  Coverage Results" MODIFIED="1522661129058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp" />
     <SUITE FILE_PATH="coverage/aihouse$app.coverage" NAME="app Coverage Results" MODIFIED="1522224684587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler/webapp" />
-    <SUITE FILE_PATH="coverage/aihouse$app_.coverage" NAME="app  Coverage Results" MODIFIED="1523425703987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp" />
+    <SUITE FILE_PATH="coverage/aihouse$app_.coverage" NAME="app  Coverage Results" MODIFIED="1524794206253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webapp" />
     <SUITE FILE_PATH="coverage/aihouse$lianjia_tongji.coverage" NAME="lianjia_tongji Coverage Results" MODIFIED="1523423751508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
-    <SUITE FILE_PATH="coverage/aihouse$static_html_gen.coverage" NAME="static_html_gen Coverage Results" MODIFIED="1524025999429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aihouse$static_html_gen.coverage" NAME="static_html_gen Coverage Results" MODIFIED="1524794281792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/aihouse$analyzeJsonData.coverage" NAME="analyzeJsonData Coverage Results" MODIFIED="1522651963261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -31,9 +32,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="67" lean-forward="false" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="675">
+              <caret line="247" column="17" lean-forward="true" selection-start-line="247" selection-start-column="17" selection-end-line="247" selection-end-column="17" />
+              <folding>
+                <element signature="e#703#2355#0" expanded="false" />
+                <element signature="e#2376#4030#0" expanded="false" />
+                <element signature="e#4051#5718#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,13 +53,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="105">
+              <caret line="74" column="64" lean-forward="true" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recent30_static.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/templates/recent30_static.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1458">
+              <caret line="129" column="7" lean-forward="false" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
               <folding>
-                <element signature="e#62#102#0" expanded="true" />
+                <marker date="1524794349759" expanded="true" signature="8269:8528" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="8498:8528" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="8839:8929" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="8864:8915" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="8957:9109" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="8982:9095" ph="{...}" />
+                <marker date="1524794349759" expanded="true" signature="9015:9077" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -63,21 +84,9 @@
       <file leaf-file-name="lianjia_area_template.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_area_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+            <state relative-caret-position="351">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lianjia_tongji.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawler/lianjia_tongji.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-              <folding>
-                <element signature="e#15#30#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,18 +94,26 @@
       <file leaf-file-name="index_static.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/templates/index_static.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4401">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="1431">
+              <caret line="188" column="7" lean-forward="false" selection-start-line="188" selection-start-column="7" selection-end-line="188" selection-end-column="7" />
+              <folding>
+                <marker date="1524794315670" expanded="true" signature="51581:51840" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="51810:51840" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="52151:52241" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="52176:52227" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="52269:52421" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="52294:52407" ph="{...}" />
+                <marker date="1524794315670" expanded="true" signature="52327:52389" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="1026">
+              <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -105,8 +122,8 @@
       <file leaf-file-name="static_html_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static_html_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="298" column="45" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="45" />
+            <state relative-caret-position="135">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
@@ -118,17 +135,7 @@
         <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_area_static.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1971">
-              <caret line="73" column="70" lean-forward="true" selection-start-line="73" selection-start-column="70" selection-end-line="73" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lianjia_static.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_static.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+              <caret line="73" column="70" lean-forward="false" selection-start-line="73" selection-start-column="70" selection-end-line="73" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -178,15 +185,15 @@
         <option value="$PROJECT_DIR$/historydata_verify.json" />
         <option value="$PROJECT_DIR$/analyzeJsonData.py" />
         <option value="$PROJECT_DIR$/webapp/templates/index_static.html" />
-        <option value="$PROJECT_DIR$/webapp/templates/index.html" />
         <option value="$PROJECT_DIR$/webapp/templates/recent30_static.html" />
         <option value="$PROJECT_DIR$/webapp/templates/lianjia_template.html" />
         <option value="$PROJECT_DIR$/crawler/lianjia_tongji.py" />
-        <option value="$PROJECT_DIR$/static_html_gen.py" />
         <option value="$PROJECT_DIR$/webapp/templates/lianjia_area_static.html" />
-        <option value="$PROJECT_DIR$/webapp/templates/lianjia_area_template.html" />
         <option value="$PROJECT_DIR$/webapp/app.py" />
         <option value="$PROJECT_DIR$/webapp/templates/base.html" />
+        <option value="$PROJECT_DIR$/webapp/templates/lianjia_area_template.html" />
+        <option value="$PROJECT_DIR$/webapp/templates/index.html" />
+        <option value="$PROJECT_DIR$/static_html_gen.py" />
       </list>
     </option>
   </component>
@@ -197,10 +204,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1165" />
+    <option name="width" value="1364" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -220,7 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +260,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,7 +293,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.static_html_gen">
+  <component name="RunManager" selected="Python.app ">
     <configuration name="analyzeJsonData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -483,11 +489,19 @@
       <option name="project" value="LOCAL" />
       <updated>1523848856749</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add lianjia area">
+      <created>1524026138838</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1524026138838</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48411018" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
@@ -495,7 +509,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07081545" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14882812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14882812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -527,7 +541,8 @@
     <MESSAGE value="Add district crawl" />
     <MESSAGE value="Add lianjia page" />
     <MESSAGE value="Fix unicode issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix unicode issue" />
+    <MESSAGE value="Add lianjia area" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add lianjia area" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -540,7 +555,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#703#2355#0" expanded="false" />
+            <element signature="e#2376#4030#0" expanded="false" />
+            <element signature="e#4051#5718#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,7 +567,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
+          <folding>
+            <marker date="1524794315670" expanded="true" signature="51581:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="51810:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52151:52241" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52176:52227" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52269:52421" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52294:52407" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52327:52389" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -556,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -572,7 +598,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3870">
           <caret line="129" column="7" lean-forward="false" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1524794349759" expanded="true" signature="8269:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8498:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8839:8929" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8864:8915" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8957:9109" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8982:9095" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="9015:9077" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,9 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
           <caret line="61" column="81" lean-forward="false" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="81" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -615,7 +646,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#703#2355#0" expanded="false" />
+            <element signature="e#2376#4030#0" expanded="false" />
+            <element signature="e#4051#5718#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -623,7 +658,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1410">
           <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding />
+          <folding>
+            <marker date="1524794315670" expanded="true" signature="51581:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="51810:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52151:52241" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52176:52227" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52269:52421" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52294:52407" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52327:52389" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +699,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3870">
           <caret line="129" column="7" lean-forward="true" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
-          <folding />
+          <folding>
+            <marker date="1524794349759" expanded="true" signature="8269:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8498:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8839:8929" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8864:8915" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8957:9109" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8982:9095" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="9015:9077" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,9 +723,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="e#62#102#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,9 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="61" column="81" lean-forward="false" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="81" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,9 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1890">
           <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <element signature="e#62#102#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +753,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4968">
           <caret line="184" column="39" lean-forward="false" selection-start-line="184" selection-start-column="24" selection-end-line="184" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#703#2355#0" expanded="false" />
+            <element signature="e#2376#4030#0" expanded="false" />
+            <element signature="e#4051#5718#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,7 +765,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
           <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
+          <folding>
+            <marker date="1524794315670" expanded="true" signature="51581:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="51810:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52151:52241" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52176:52227" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52269:52421" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52294:52407" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52327:52389" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,23 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/recent60_static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="76" column="14" lean-forward="false" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/recent30_static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3483">
-          <caret line="129" column="7" lean-forward="false" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,9 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,29 +897,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="72" column="0" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="67" lean-forward="false" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/index_static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4401">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_static.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="1836">
           <caret line="68" column="32" lean-forward="false" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
           <folding />
         </state>
@@ -893,8 +910,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/lianjia_tongji.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="2214">
+          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
           </folding>
@@ -912,43 +929,93 @@
     <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_area_static.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1971">
-          <caret line="73" column="70" lean-forward="true" selection-start-line="73" selection-start-column="70" selection-end-line="73" selection-end-column="70" />
+          <caret line="73" column="70" lean-forward="false" selection-start-line="73" selection-start-column="70" selection-end-line="73" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/app.py">
+    <entry file="file://$PROJECT_DIR$/webapp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+        <state relative-caret-position="1026">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/templates/recent30_static.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="129" column="7" lean-forward="false" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
           <folding>
-            <element signature="e#62#102#0" expanded="true" />
+            <marker date="1524794349759" expanded="true" signature="8269:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8498:8528" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8839:8929" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8864:8915" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8957:9109" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="8982:9095" ph="{...}" />
+            <marker date="1524794349759" expanded="true" signature="9015:9077" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/templates/index_static.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="188" column="7" lean-forward="false" selection-start-line="188" selection-start-column="7" selection-end-line="188" selection-end-column="7" />
+          <folding>
+            <marker date="1524794315670" expanded="true" signature="51581:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="51810:51840" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52151:52241" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52176:52227" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52269:52421" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52294:52407" ph="{...}" />
+            <marker date="1524794315670" expanded="true" signature="52327:52389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="247" column="17" lean-forward="true" selection-start-line="247" selection-start-column="17" selection-end-line="247" selection-end-column="17" />
+          <folding>
+            <element signature="e#703#2355#0" expanded="false" />
+            <element signature="e#2376#4030#0" expanded="false" />
+            <element signature="e#4051#5718#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/templates/lianjia_area_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+        <state relative-caret-position="351">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static_html_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="298" column="45" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="45" />
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/webapp/templates/recent60_static.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="834">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="74" column="64" lean-forward="true" selection-start-line="74" selection-start-column="64" selection-end-line="74" selection-end-column="64" />
           <folding />
         </state>
       </provider>

@@ -18,7 +18,7 @@ app_path = "webapp/app.py"
 
 
 def gen_index_static_html(template_html_path, static_html_path, date, num_trans, num_verify, weeks, num_week_trans,
-                          num_week_verify, date_day30, day30_num_trans):
+                          num_week_verify, date_day30, day30_num_trans, months, num_month_trans):
     template_file = open(template_html_path, "r")
     static_file = open(static_html_path, "w")
     for line in template_file:
@@ -38,6 +38,10 @@ def gen_index_static_html(template_html_path, static_html_path, date, num_trans,
             line = line.replace("{{date_day30}}", str(date_day30))
         elif "{{day30_num_trans}}" in line:
             line = line.replace("{{day30_num_trans}}", str(day30_num_trans))
+        elif "{{months}}" in line:
+            line = line.replace("{{months}}", str(months))
+        elif "{{num_month_trans}}" in line:
+            line = line.replace("{{num_month_trans}}", str(num_month_trans))
         static_file.write(line)
     template_file.close()
     static_file.close()
@@ -68,7 +72,7 @@ def gen_lianjia_static_html(lianjia_html_path, static_html_path, date, num_total
 
 
 def gen_lianjia_area_static_html(html_path, static_html_path, date, num_new_trans,
-                            num_new_takelook, num_on_sale, num_recent90_trans):
+                                 num_new_takelook, num_on_sale, num_recent90_trans):
     template_file = open(html_path, "r")
     static_file = open(static_html_path, "w")
     for line in template_file:
@@ -112,18 +116,31 @@ def gen_index(days=0, template_html=template_html_path, static_html=static_html_
     day30_num_trans = []
     num_verify = []
     weeks = []
+    months = []
     num_week_trans = []
     num_week_verify = []
+    num_month_trans = []
     count = trans.find().count()
     week_ends = yesterday.strftime(str_format)
     count_week_trans = 0
     count_week_verify = 0
+    count_month_trans = 0
     temp_day30_num = []
+    current_month = str(yesterday.year) + "/" + str(yesterday.month)
     print count
     for item in trans.find().sort("date", pymongo.DESCENDING):
         prefix_date = item['date'].replace("/0", "/").encode("utf-8")
         prefix_date_v = item['date'].replace("/", "-").encode("utf-8")
         dayOfWeek = datetime.datetime.strptime(item['date'], str_format).weekday()
+        last_month = str(datetime.datetime.strptime(item['date'], '%Y/%m/%d').year) + "/" + str(
+            datetime.datetime.strptime(item['date'], '%Y/%m/%d').month)
+        if last_month == current_month:
+            count_month_trans += int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8"))
+        else:
+            months.append(current_month)
+            num_month_trans.append(count_month_trans)
+            count_month_trans = int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8"))
+            current_month = last_month
         if dayOfWeek == 6:
             week_ends = prefix_date
             count_week_trans = int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8"))
@@ -141,6 +158,7 @@ def gen_index(days=0, template_html=template_html_path, static_html=static_html_
         if len(temp_day30_num) == 30:
             day30_num_trans.append(sum(temp_day30_num) / len(temp_day30_num))
             temp_day30_num = temp_day30_num[1:]
+
         date.append(prefix_date)
         num_trans.append(int(item[prefix_date + u'存量房网上签约'][u'住宅签约套数：'].encode("utf-8")))
         num_verify.append(int(item[prefix_date_v + u'核验房源'][u'核验住宅套数：'].encode("utf-8")))
@@ -158,7 +176,8 @@ def gen_index(days=0, template_html=template_html_path, static_html=static_html_
                           num_verify=num_verify[days::-1],
                           weeks=weeks[count_week::-1], num_week_trans=num_week_trans[count_week::-1],
                           num_week_verify=num_week_verify[count_week::-1], date_day30=date_day30[days::-1],
-                          day30_num_trans=day30_num_trans[days::-1])
+                          day30_num_trans=day30_num_trans[days::-1], months=months[::-1],
+                          num_month_trans=num_month_trans[::-1])
 
 
 def gen_lianjia(days=0, template_html=template_html_path, static_html=static_html_path):
@@ -296,13 +315,14 @@ def gen_lianjia_area(days=0, template_html=lianjia_area_html_path, static_html=l
     # print date
     # print num_total_trans
     gen_lianjia_area_static_html(template_html, static_html, date=date[days::-1], num_new_trans=num_new_trans[days::-1],
-                             num_new_takelook=num_new_takelook[days::-1], num_on_sale=num_on_sale[days::-1],
-                            num_recent90_trans=num_recent90_trans[days::-1])
+                                 num_new_takelook=num_new_takelook[days::-1], num_on_sale=num_on_sale[days::-1],
+                                 num_recent90_trans=num_recent90_trans[days::-1])
 
-# gen_index()
-# gen_index(days=30, template_html=template_html_path, static_html=recent30_static_html_path)
-# gen_index(days=120, template_html=template_html_path, static_html=recent120_static_html_path)
-# gen_index(days=360, template_html=template_html_path, static_html=recent360_static_html_path)
-# gen_lianjia(days=0, template_html=lianjia_html_path, static_html=lianjia_static_html_path)
+
+gen_index()
+gen_index(days=30, template_html=template_html_path, static_html=recent30_static_html_path)
+gen_index(days=120, template_html=template_html_path, static_html=recent120_static_html_path)
+gen_index(days=360, template_html=template_html_path, static_html=recent360_static_html_path)
+gen_lianjia(days=0, template_html=lianjia_html_path, static_html=lianjia_static_html_path)
 gen_lianjia_area(days=0, template_html=lianjia_area_html_path, static_html=lianjia_area_static_html_path)
 update_app()
